@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essential Resources Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div id="topBar">
+    <button id="menuToggle">☰</button>
+    <div id="appName">Essential Resources</div>
+    <div id="authControls">
+      <button id="loginBtn">Sign in with Google</button>
+      <button id="logoutBtn" style="display: none;">Sign out</button>
+    </div>
+  </div>
+  
+
+  <!-- Admin-only form (injected via JS) -->
+  <div id="formWrapper" style="display: none;"></div>
+
+  <!-- Main Layout: Sidebar + Map -->
+  <div id="mainLayout">
+    <div id="sidebar">
+      <input type="text" id="searchBar" placeholder="Buscar..." />
+      <div id="locationList"></div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <!-- Footer -->
+<footer id="footer" style="background-color: #f4f4f4; color: #333; text-align: center; padding: 1.5rem; font-family: 'Arial', sans-serif;">
+    <div style="font-size: 1.4rem; font-weight: bold;">Supernovas de Inclusión</div>
+    <div>contacto@superinclusion.org</div>
+    <div>©2025 por Supernovas de Inclusión</div>
+  </footer>
+  
+
+  <!-- JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
