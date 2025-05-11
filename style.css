@@ -1,395 +1,294 @@
 /* Reset basic styles */
 body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background-color: #fefefe;
-  }
-  
-  /* Top navigation bar */
-  #topBar {
-    background-color: #3b8beb;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  #appName {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  #authControls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #authControls p {
-    margin: 0;
-  }
-  
-  #authControls button {
-    background-color: white;
-    color: #3b8beb;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  #authControls button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  /* Admin form layout */
-  #formWrapper {
-    background-color: #f4f4f4;
-    padding: 1.5rem 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  #formWrapper form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .formInner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    max-width: 1000px;
-    width: 100%;
-  }
-  
-  
-  
-  
-  
-  form input,
-  form button {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  form button {
-    background-color: #3b8beb;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #2f6fc0;
-  }
-  
-  /* Admin panel styling */
-  #adminPanel {
-    padding: 0;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: transparent;
-    border-top: none;
-    display: none; /* <-- hide it unless needed */
-  }
-  
-  
-  .adminItem {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .adminItem button {
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #3b8beb;
-    color: white;
-  }
-  
-  .adminItem button:hover {
-    background-color: #2f6fc0;
-  }
-  
-  /* Map */
-  #map {
-    flex-grow: 1;
-    width: 75%;
-    height: 100%;
-  }
-  
-  
-  /* Footer */
-  #footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.85rem;
-    color: #888;
-    margin-top: 2rem;
-  }
-  
-  /* Form wrapper hiding */
-  #formWrapper {
-    display: none;
-  }
-  
-  #formWrapper[style="display: none;"] {
-    display: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 0 !important;
-    background: transparent !important;
-    overflow: hidden;
-  }
-  
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #fefefe;
+}
+
+/* Top navigation bar */
+#topBar {
+  background-color: #3b8beb;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+#appName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+#authControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#authControls p {
+  margin: 0;
+}
+
+#authControls button {
+  background-color: white;
+  color: #3b8beb;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#authControls button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Toggle Button */
+#toggleSidebar {
+  display: none;
+  font-size: 1.5rem;
+  background: white;
+  color: #3b8beb;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+/* Admin form layout */
+#formWrapper {
+  background-color: #f4f4f4;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#formWrapper form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #3b8beb;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2f6fc0;
+}
+
+/* Admin panel */
+#adminPanel {
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: transparent;
+  display: none;
+}
+
+.adminItem {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.adminItem button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3b8beb;
+  color: white;
+}
+
+.adminItem button:hover {
+  background-color: #2f6fc0;
+}
+
+/* Layout */
+#mainLayout {
+  display: flex;
+  height: calc(100vh - 60px); /* height of top bar */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 25%;
+  max-width: 400px;
+  min-width: 250px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  position: relative;
+  z-index: 1;
+}
+
+/* Search bar */
+#searchBar {
+  width: calc(100% - 2rem);
+  padding: 0.75rem 1rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: system-ui, sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#searchBar::placeholder {
+  color: #888;
+}
+
+#searchBar:focus {
+  border-color: #3b8beb;
+  box-shadow: 0 0 0 2px rgba(59, 139, 235, 0.2);
+}
+
+/* Location list */
+#locationList {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+.locationItem {
+  background: white;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.locationItem button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3b8beb;
+  color: white;
+}
+
+.locationItem button:hover {
+  background-color: #2f6fc0;
+}
+
+/* Map */
+#map {
+  flex-grow: 1;
+  width: 75%;
+  height: 100%;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+/* Highlighted text */
+mark {
+  background-color: yellow;
+  color: inherit;
+  padding: 0;
+  font-weight: inherit;
+  border-radius: 3px;
+}
+
+.gps-dot {
+  background-color: #007bff;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
+}
+
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
   #mainLayout {
-    display: flex;
-    height: calc(100vh - 100px); /* Adjust based on your topbar/footer */
-    width: 100%;
-    overflow: hidden; /* Add this to prevent sidebar overflow */
-  }
-  
-  #sidebar {
-    width: 25%;
-    max-width: 400px;
-    min-width: 250px;
-    background-color: #f9f9f9;
-    display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    height: 100%;
-    overflow-y: auto;
-    padding: 1rem;
-    border-right: 1px solid #ddd;
-    position: relative; /* ensures it doesn’t float or overlap */
-    z-index: 1; /* ensures it stays above the map */
   }
-  
-  
-  
-  #searchInput {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    box-sizing: border-box; /* Add this to respect padding */
-  }
-  
-  
-  #locationList {
-    max-height: calc(100vh - 300px); /* adjust to fit your header + search bar */
-    overflow-y: auto;
-    margin-top: 0.5rem;
-  }
-  
-  
-  .locationItem {
-    background: white;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  }
-  
-  
-  .locationItem button {
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #3b8beb;
-    color: white;
-  }
-  
-  .locationItem button:hover {
-    background-color: #2f6fc0;
-  }
-  
+
   #map {
-    width: 75%;
-    height: 100%;
+    width: 100%;
+    height: 60vh;
   }
 
-  #searchBar {
-    width: calc(100% - 2rem);
-    padding: 0.75rem 1rem;
-    margin: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: system-ui, sans-serif;
-    outline: none;
-    box-sizing: border-box;
-    background-color: white;
-
-     /* Sticky behavior */
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  #searchBar::placeholder {
-    color: #888;
+  #sidebar {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
   }
 
-  #searchBar:focus {
-    border-color: #3b8beb;
-    box-shadow: 0 0 0 2px rgba(59, 139, 235, 0.2);
+  #sidebar.open {
+    max-height: 400px;
   }
 
-  mark {
-    background-color: yellow;
-    color: inherit;
-    padding: 0;
-    font-weight: inherit;
-    border-radius: 3px;
+  #toggleSidebar {
+    display: inline;
   }
-  
+}
 
-  @media (max-width: 768px) {
-    #mainLayout {
-      flex-direction: column;
-    }
-  
-    #sidebar {
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-        padding: 0 1rem 1rem;
-        box-sizing: border-box;
-      }
-      
-  
-    #map {
-      height: calc(100vh - 300px);
-      width: 100%;
-    }
-  
-    form {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    form input,
-    form button {
-      width: 100%;
-    }
-  
-    #authControls {
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.5rem;
-    }
-  
-    #topBar {
-        background-color: #3b8beb;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
-        height: 60px;
-      }
-      
-      #menuToggle {
-        background: white;
-        color: #3b8beb;
-        font-size: 1.2rem;
-        border: none;
-        padding: 0.4rem 0.6rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      
-      #appName {
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-align: center;
-        flex: 1;
-      }
-      
-      #authControls {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      
-      #authControls button {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-        background-color: white;
-        color: #3b8beb;
-        border: none;
-        border-radius: 4px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      
-  }
-
-  /* Hide toggle by default and show on small screens */
-.mobile-toggle {
+/* Hide toggle on desktop */
+@media (min-width: 769px) {
+  #toggleSidebar {
     display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 10px;
   }
-  
-  /* Adjust layout on mobile */
-  @media (max-width: 768px) {
-    #mainLayout {
-      flex-direction: column;
-    }
-  
-    #sidebar {
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-  
-    #sidebar.open {
-      max-height: 400px; /* or enough to show the list + search */
-    }
-  
-    .mobile-toggle {
-      display: inline;
-    }
-  
-    #map {
-      height: 60vh;
-    }
-  }
-  
-  
-  
-  
-  
+}
   
